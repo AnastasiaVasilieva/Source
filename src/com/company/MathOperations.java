@@ -2,30 +2,40 @@ package com.company;
 
 public class MathOperations {
 
-    public void getDivisor(int q, int w) {
-        System.out.println(q + " / " + w + " = " + q / w + " и " + q % w + " в остатке");
-    }
-
-    public int sumChisla(int n) {
-        int summ = 0;
-        for (int i = 0; i < 3; i++) {
-            summ += n % 10;
-            n /= 10;
-        }
-        return summ;
-    }
-
-    public int integNumber(double n){
-        return (int)n;
-    }
+    private double n;
 
     public static void main(String[] args) {
+
         MathOperations math = new MathOperations();
-        math.getDivisor(21, 8);
-        System.out.println("Сумма: " + math.sumChisla(26));
-        System.out.println("ближайшее целое число "+math.integNumber(234.93));
-        System.out.println("Сумма: " + math.sumChisla(156));
+        double n;
+        math.setN(26);
+        n = math.getN();
+        System.out.println(math.sumChisla(n));
 
-
+        MathOperations arifm = new MathOperations();
+        double num;
+        arifm.setN(64);
+        num = arifm.getN();
+        System.out.println(arifm.sumChisla(num));
     }
+
+    public double getN() {
+        return n;
+    }
+
+    public void setN(double newN) {
+        n = newN;
+    }
+
+    public double sumChisla(double n) {
+        double sum = 0;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
+
+
 }
+
