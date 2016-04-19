@@ -22,6 +22,7 @@ public class MInMax {
         this.n = n;
     }
     public int findMax(double n) {
+        n*=100;
         double max = 0;
         while (n > 0) {
             double m = n % 10;
@@ -33,6 +34,7 @@ public class MInMax {
         return (int) max;
     }
     public int findMin(double n) {
+        n*=100;
         double min = 9;
         while (n > 1) {
             double m = n % 10;
