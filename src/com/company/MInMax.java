@@ -5,8 +5,9 @@ public class MInMax {
 
     public static void main(String[] args) {
         double n;
+
         MInMax minmax = new MInMax();
-        minmax.setN(567.12);
+        minmax.setN(567);
         n = minmax.getN();
         System.out.println("max = "+minmax.findMax(n));
         System.out.println("min = "+minmax.findMin(n));
@@ -20,8 +21,6 @@ public class MInMax {
     public void setN(double n) {
         this.n = n;
     }
-
-
     public int findMax(double n) {
         double max = 0;
         while (n > 0) {
@@ -33,7 +32,6 @@ public class MInMax {
         }
         return (int) max;
     }
-
     public int findMin(double n) {
         double min = 9;
         while (n > 1) {
