@@ -29,6 +29,7 @@ public class MathOperations {
     }
 
     public int sumChisla(double n) {
+        n*=100;
         int sum = 0;
         while (n != 0) {
             sum += n % 10;
