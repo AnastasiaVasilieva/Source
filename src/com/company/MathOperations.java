@@ -8,15 +8,16 @@ public class MathOperations {
 
         MathOperations math = new MathOperations();
         double n;
-        math.setN(26);
+        math.setN(265);
         n = math.getN();
         System.out.println(math.sumChisla(n));
 
         MathOperations arifm = new MathOperations();
         double num;
-        arifm.setN(64);
+        arifm.setN(648);
         num = arifm.getN();
         System.out.println(arifm.sumChisla(num));
+
     }
 
     public double getN() {
@@ -27,8 +28,8 @@ public class MathOperations {
         n = newN;
     }
 
-    public double sumChisla(double n) {
-        double sum = 0;
+    public int sumChisla(double n) {
+        int sum = 0;
         while (n != 0) {
             sum += n % 10;
             n /= 10;
